@@ -3,7 +3,7 @@ module github.com/HexaWX/Plugins-Exporters-Stdout
 go 1.25.6
 
 require (
-	github.com/HexaWX/HexaWX v0.0.0-20260222175308-cb9fe6c58bb9
+	github.com/HexaWX/HexaWX v0.0.0-20260222190538-2e1014d48d16
 	github.com/hashicorp/go-plugin v1.7.0
 )
 
