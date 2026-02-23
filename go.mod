@@ -4,7 +4,7 @@ go 1.25.6
 
 require (
 	github.com/hashicorp/go-plugin v1.7.0
-	github.com/hexawx/hexawx v0.0.0-20260223011818-871c53860672
+	github.com/hexawx/hexawx v0.0.0-20260223013143-b177a52d8fb5
 )
 
 require (
