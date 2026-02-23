@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/HexaWX/HexaWX/core"
 	"github.com/hashicorp/go-plugin"
+	"github.com/hexawx/hexawx/core"
 )
 
 type StdoutExporter struct {
@@ -29,14 +29,9 @@ func (e *StdoutExporter) Export(record core.WeatherRecord) error {
 
 func main() {
 	exporter := &StdoutExporter{}
-	var handshakeConfig = plugin.HandshakeConfig{
-		ProtocolVersion:  1,
-		MagicCookieKey:   "GOWX_PLUGIN",
-		MagicCookieValue: "hello",
-	}
 
 	plugin.Serve(&plugin.ServeConfig{
-		HandshakeConfig: handshakeConfig,
+		HandshakeConfig: core.Handshake,
 		Plugins: map[string]plugin.Plugin{
 			"exporter": &core.ExporterPlugin{Impl: exporter},
 		},
